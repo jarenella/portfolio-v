@@ -1,0 +1,33 @@
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main {
+    position: absolute;
+}
+
+.title {
+    color: white;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10vmin;
+    margin-top: 40vmin;
+}
+
+p {
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5vmin;
+    padding: 10px;
+    text-align: center;
+}
+
+.text-holder {
+    background-color:rgb(250, 196, 255);
+    margin-left: 10vmin;
+    width: fill;
+    display: flex;
+    justify-content: center;
+}
