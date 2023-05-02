@@ -46,6 +46,23 @@ hatLoader.load('./meshes/test.glb',
   }
 )
 
+let cupCake = {}
+const cupCakeLoader = new GLTFLoader();
+cupCakeLoader.load('./meshes/cupcake.glb', 
+  (gltf) => {
+    cupCake = gltf.scene;
+    scene.add(cupCake);
+    cupCake.rotation.x = 0.5;
+    cupCake.position.x = 0;
+    cupCake.position.y = 11;
+    cupCake.position.z = 14;
+  }, 
+  undefined, 
+  (error) => {
+    console.error(error);
+  }
+)
+
 function addStar() {
     const geometry = new THREE.SphereGeometry(0.25);
     const material = new THREE.MeshStandardMaterial({color: 0xB487FF});
@@ -74,20 +91,16 @@ Array(200).fill().forEach(addStar);
 
 
 function moveCamera() {
-    console.log("starting everything")
-    const currntLoction = document.body.getBoundingClientRect().top;
-    moon.rotation.x += 0.05;
-    moon.rotation.y += 0.075;
-    moon.rotation.z += 0.05;
-    console.log("finished moon rotation")
-
-    camera.position.z = currntLoction * -0.09;
-    camera.position.x = currntLoction * -0.008;
-    camera.position.y = currntLoction * -0.008;
-    camera.rotation.y += 0.025;
-    console.log("finished camera movement")
+  console.log("scrolling")
+  const currntLoction = document.body.getBoundingClientRect().top;
+  hat.rotation.y += 0.01;
+  camera.rotation.y += 0.01;
+  cupCake.position.z -= 0.0005;
+  cupCake.position.x += 0.01;
+  cupCake.rotation.x -= 0.008;
+  cupCake.position.y -= 0.05;
 }
-// document.body.onscroll = moveCamera
+document.body.onscroll = moveCamera
 window.addEventListener("scroll", moveCamera);
 
 function animate() {
