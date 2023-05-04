@@ -16,6 +16,8 @@ camera.position.y = 3;
 camera.position.z = 8;
 camera.rotation.y = 1.2;
 
+scene.background = new THREE.Color(0x0A0717);
+
 renderer.render(scene, camera);
 
 const pointLight = new THREE.PointLight(0xffffff);
@@ -52,10 +54,12 @@ cupCakeLoader.load('./meshes/cupcake.glb',
   (gltf) => {
     cupCake = gltf.scene;
     scene.add(cupCake);
-    cupCake.rotation.x = 0.5;
+    cupCake.rotation.x = 0.3;
     cupCake.position.x = 0;
-    cupCake.position.y = 11;
-    cupCake.position.z = 14;
+    // cupCake.position.y = 11;
+    cupCake.position.y = 3;
+    // cupCake.position.z = 14;
+    cupCake.position.z = 17;
   }, 
   undefined, 
   (error) => {
@@ -95,10 +99,7 @@ function moveCamera() {
   const currntLoction = document.body.getBoundingClientRect().top;
   hat.rotation.y += 0.01;
   camera.rotation.y += 0.01;
-  cupCake.position.z -= 0.0005;
-  cupCake.position.x += 0.01;
-  cupCake.rotation.x -= 0.008;
-  cupCake.position.y -= 0.05;
+  cupCake.rotation.y += 0.01;
 }
 document.body.onscroll = moveCamera
 window.addEventListener("scroll", moveCamera);
