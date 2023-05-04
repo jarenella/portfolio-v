@@ -1,0 +1,57 @@
+:root {
+    /* --header: pink; */
+    --header: rgb(250, 196, 255);
+    --bodtxt: rgb(144, 199, 199);
+}
+
+.card {
+    margin-bottom: 10vmin;
+    font-size: 3rem;
+    font-weight: bold;
+    background: hsl(222, 45%, 7%);
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+
+    transform-style: preserve-3d;
+    transform:
+        perspective(5000px)
+        rotateY(var(--rotateY))
+        rotateX(var(--rotateX));
+}
+
+.header {
+    color: var(--header);
+}
+
+.bodtxt {
+    color: var(--bodtxt);
+}
+
+.card > * {
+    /* letter  glow */
+    text-shadow: 0 0 0.3em currentColor;
+
+    width: 70vmin;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+}
+
+.card::before {
+    inset: 0.75rem;
+    background: black;
+    transform: translateZ(-49px);
+    filter: blur(15px);
+    opacity: 0.5;
+}
+
+.card::after {
+    inset: -1rem;
+    background: linear-gradient(-45deg, rgb(255, 124, 124), rgb(124, 124, 255));
+    transform: translateZ(-50px);
+}
