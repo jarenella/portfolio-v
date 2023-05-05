@@ -8,10 +8,13 @@
     margin-bottom: 10vmin;
     font-size: 3rem;
     font-weight: bold;
-    background: hsl(222, 45%, 7%);
+    background: rgb(10, 15, 26);
     padding: 2rem;
     border-radius: 1rem;
     position: relative;
+
+    background-image: url("https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&w=1000&q=80");
+    background-position: 50% 50%;
 
     transform-style: preserve-3d;
     transform:
