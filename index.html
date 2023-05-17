@@ -7,21 +7,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="slideIn.css">
     <title>Jamie Arenella - Web Developer</title>
   </head>
   <body>
     <canvas id="bg"></canvas>
     <main>
       <h1 class="title"><span>FIRSTNM</span><br><span>LASTNAMESS</span></h1>
-      <section>
-        <h2 class="title">ABOUT ME</h2>
-        <section class="text-holder">
+      <section class="main-sctn about-me-sctn">
+        <h2 class="title hidden-left">ABOUT ME</h2>
+        <section class="text-holder hidden-right">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </section>
       </section>
-      <section>
-        <h2 class="title">MY WORK</h2>
-          <div class="cards-holder">
+      <section class="main-sctn">
+        <h2 class="title hidden-left">MY WORK</h2>
+          <div class="cards-holder hidden-right">
             <!-- <div class="card">
               <h3 class="card-title">Card Title</h3>
               <div class="card-body">
@@ -116,12 +117,13 @@
             </div>
           </div>
       </section>
-      <section>
-        <h2 class="title">Contact</h2>
+      <section class="main-sctn">
+        <h2 class="title hidden-left">CONTACT</h2>
       </section>
     </main>
     
     <script type="module" src="/main.js"></script>
     <script type ="module" src="/card.js"></script>
+    <script type="module" src="/slideIn.js"></script>
   </body>
 </html>

@@ -96,7 +96,7 @@ Array(200).fill().forEach(addStar);
 
 function moveCamera() {
   console.log("scrolling")
-  const currntLoction = document.body.getBoundingClientRect().top;
+  const currentLocation = document.body.getBoundingClientRect().top;
   hat.rotation.y += 0.01;
   camera.rotation.y += 0.01;
   cupCake.rotation.y += 0.01;

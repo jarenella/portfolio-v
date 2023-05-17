@@ -1,0 +1,24 @@
+@media(prefers-reduced-motion) {
+    
+}
+
+.main-sctn {
+    overflow-x: hidden;
+}
+
+.hidden-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1.5s;
+}
+
+.hidden-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
